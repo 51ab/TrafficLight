@@ -15,7 +15,7 @@ public static void main(String[] args) throws InterruptedException {
 	while (true) {
 		l1.incrementValue();
 
-		Thread.sleep(500);
+		Thread.sleep(200);
 
 		l1.swapEm();
 
@@ -34,9 +34,6 @@ private static JFrame initializeFrame() {
 
 static class Light extends JPanel {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private int iValue = 0;
@@ -84,12 +81,12 @@ static class Light extends JPanel {
 			this.iYellow = Color.yellow;
 
 		}
-		if (this.iValue == 15) {
+		if (this.iValue == 12) {
 			this.iRed = Color.black;
 			this.iYellow = Color.black;
 			this.iGreen = Color.green;
 		}
-		if (this.iValue == 20) {
+		if (this.iValue == 14) {
 			this.iGreen = Color.black;
 			this.iYellow = Color.yellow;
 
@@ -101,11 +98,11 @@ static class Light extends JPanel {
 	public void defineLight(Graphics g) {
 
 		g.setColor(this.iRed);
-		g.fillRoundRect(80, this.topLightHeight, 80, 80, 70, 70);
+		g.fillRoundRect(80, this.topLightHeight, 100, 100, 70, 70);
 		
 
 		g.setColor(this.iYellow);
-		g.fillRoundRect(80, this.topLightHeight+this.iDistance, 80, 80, 70, 70);
+		g.fillRoundRect(80, this.topLightHeight+this.iDistance, 100, 100, 70, 70);
 
 		g.setColor(this.iGreen);
 		g.fillRoundRect(80, this.topLightHeight+2*this.iDistance, 80, 80, 70, 70);
