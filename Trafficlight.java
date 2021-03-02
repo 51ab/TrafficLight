@@ -18,11 +18,8 @@ public static void main(String[] args) throws InterruptedException {
 		Thread.sleep(200);
 
 		l1.swapEm();
-
 	}
-
 }
-
 private static JFrame initializeFrame() {
 	JFrame frame = new JFrame();
 	frame.setTitle("Trafficligth");
